@@ -13,7 +13,7 @@ const Calculator = () => {
     setInputValue((inputValue === '0' ? '' : inputValue) + value)
   }
 
-  const reset = ():void => {
+  const reset = (): void => {
     setInputValue('0')
   }
 
@@ -21,9 +21,9 @@ const Calculator = () => {
     switch(operation) {
       case '+': return firstNumber + secondNumber
     }
-    return 0
+    return 1
   }
-        
+
   return (
     <Flex justify={'center'}>
       <Container width={400}>
@@ -44,17 +44,17 @@ const Calculator = () => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='7-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='7-button'>
                   7
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='8-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='8-button'>
                   8
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='9-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='9-button'>
                   9
                 </Button>
               </Grid.Column>
@@ -64,17 +64,17 @@ const Calculator = () => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='4-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='4-button'>
                   4
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='5-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='5-button'>
                   5
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='6-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='6-button'>
                   6
                 </Button>
               </Grid.Column>
@@ -84,17 +84,17 @@ const Calculator = () => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='1-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='1-button'>
                   1
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='2-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='2-button'>
                   2
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='3-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='3-button'>
                   3
                 </Button>
               </Grid.Column>
@@ -104,12 +104,12 @@ const Calculator = () => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={4}>
-                <Button fluid onClick={(e) => concatNumber(e)} data-testid='0-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='0-button'>
                   0
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
-              <Button fluid onClick={(e) => concatNumber(e)} data-testid='dot-button'>
+                <Button fluid onClick={e => concatNumber(e)} data-testid='dot-button'>
                   .
                 </Button>
               </Grid.Column>
@@ -128,7 +128,7 @@ const Calculator = () => {
         </Segment>
       </Container>
     </Flex>
-  );
+  )
 
 }
 
