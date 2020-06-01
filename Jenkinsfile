@@ -4,7 +4,8 @@ pipeline {
         stage("Build") {
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs14') {
-                    sh 'docker-compose up -d'
+                    sh 'npm install'
+                    sh 'npm start'
                 }
             }
         }
