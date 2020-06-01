@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh 'sudo docker-compose build'
-                sh 'sudo docker-compose up -d'
+                nodejs(nodeJSInstalationName: nodejs) {
+                    sh 'docker-compose up -d'
+                }
             }
         }
     }
