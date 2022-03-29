@@ -85,7 +85,7 @@ const Calculator = () => {
             <Grid.Row>
               <Grid.Column width={4}>
                 <Button fluid onClick={e => concatNumber(e)} data-testid='1-button'>
-                  1
+                  One
                 </Button>
               </Grid.Column>
               <Grid.Column width={4}>
